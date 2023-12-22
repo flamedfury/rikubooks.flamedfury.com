@@ -1,0 +1,120 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+:root {
+  --color-dark: #000000;
+  --color-light: #ffffff;
+  --color-primary: #1a8fe3;
+  --space-s-m: clamp(1rem, 0.73rem + 1.36vw, 1.875rem);
+  --space-m-l: clamp(1.5rem, 1.19rem + 1.55vw, 2.5rem);
+  --space-l-xl: clamp(2rem, 1.46rem + 2.72vw, 3.75rem);
+  --size-step-0: clamp(1rem, calc(0.96rem + 0.22vw), 1.13rem);
+  --size-step-1: clamp(1.25rem, calc(1.16rem + 0.43vw), 1.5rem);
+  --size-step-2: clamp(1.56rem, calc(1.41rem + 0.76vw), 2rem);
+  --size-step-3: clamp(1.95rem, calc(1.71rem + 1.24vw), 2.66rem);
+  --size-step-4: clamp(2.44rem, calc(2.05rem + 1.93vw), 3.55rem);
+}
+
+body {
+  background: var(--color-light);
+  color: var(--color-dark);
+  padding: 2em;
+  font-family: system-ui, sans-serif;
+  font-size: var(--size-step-0);
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3 {
+  font-family: system-ui, sans-serif;
+  font-weight: 900;
+}
+
+h1 {
+  font-size: var(--size-step-4);
+}
+
+h2 {
+  font-size: var(--size-step-3);
+}
+
+h3 {
+  font-size: var(--size-step-2);
+}
+
+ul,
+ol {
+  padding-inline-start: 1em;
+}
+
+blockquote {
+  padding-inline-start: 1em;
+  border-inline-start: 0.3em solid;
+}
+
+hr {
+  max-width: 60ch;
+}
+
+/* Utilities */
+.region {
+  padding-block-start: var(--region-space-top, var(--space-m-l));
+  padding-block-end: var(--region-space-bottom, var(--space-m-l));
+}
+
+.flow>*+* {
+  margin-block-start: var(--flow-space, 1em);
+}
+
+/* Flow and rythm */
+:is(h1, h2, h3, blockquote) {
+  --flow-space: 1.5em;
+}
+
+:is(h1, h2, h3)+* {
+  --flow-space: 0.5em;
+}
+
+/* Line lengths */
+header, article {
+  max-width: 60ch;
+  margin-inline: auto;
+}
+
+blockquote {
+  max-width: 50ch;
+}
+
+h1 {
+  max-width: 20ch;
+}
+
+h2,
+h3 {
+  max-width: 28ch;
+}
+
+/* Guestbook styles */
+
+.guestbook-entry {
+  padding: 1em;
+  background: #f0f8ff;
+  border-radius: 4px;
+}

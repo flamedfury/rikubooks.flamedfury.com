@@ -1,0 +1,22 @@
+---
+layout: base
+---
+
+<header class="region flow">
+  <h1>{{ title }}</h1>
+</header>
+
+<article class="flow">
+
+  {{ content | safe }}
+
+  {% include "partials/form.njk" %}
+
+</article>
+
+<hr class="flow">
+
+<article class="guestbook-entry flow">
+  <p><strong>fLaMEd</strong> on 2023-12-19</p>
+  <p>Hey, thanks for such a cool little service. I love it!</p>
+</article>
